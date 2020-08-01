@@ -1,17 +1,23 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Users extends React.Component {
   render() {
     return (
-      <div>
+      <div id="users">
         <h1>All Users</h1>
-        <ul>
+        <ol>
           {this.props.users.map(user => (
-            <li key={user.id}>{`${user.f_name} ${user.l_name} ${user.email}`}</li>
+            <li key={user.id}>{`${user.f_name} - ${user.l_name} - ${user.email}`}</li>
           ))}
-        </ul>
+        </ol>
       </div>
     );
   }
 }
+
+Users.propTypes = {
+  users: PropTypes.array.isRequired
+};
+
+export default Users;

@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ #users {
+    margin: 0;
+    color: hsla(313, 50%, 41%, 0.849);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
