@@ -1,16 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 class Users extends React.Component {
-  render () {
+  render() {
     return (
-      <React.Fragment>
-        Users: {this.props.users}
-      </React.Fragment>
+      <div>
+        <h1>All Users</h1>
+        <ul>
+          {this.props.users.map(user => (
+            <li key={user.id}>{`${user.f_name} ${user.l_name} ${user.email}`}</li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }
-
-Users.propTypes = {
-  users: PropTypes.array
-};
-export default Users
